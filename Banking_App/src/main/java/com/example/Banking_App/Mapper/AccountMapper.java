@@ -4,22 +4,20 @@ import com.example.Banking_App.Dto.AccountDto;
 import com.example.Banking_App.Entity.Account;
 
 public class AccountMapper {
-    
-    public static AccountDto mapToAccountDto(Account account){
-        AccountDto num=new AccountDto(
-            account.getId(),
-            account.getAccountHolderName(),
-            account.getBalance()
-        );
+
+    public static AccountDto mapToAccountDto(Account account) {
+        AccountDto num = new AccountDto(
+                account.getId(),
+                account.getAccountHolderName(),
+                account.getBalance());
         return num;
     }
 
-    public static Account mapToAccount(AccountDto accountDto){
-        Account num=new Account(
-            accountDto.getId(),
-            accountDto.getAccountHolderName(),
-            accountDto.getBalance()
-        );
+    public static Account mapToAccount(AccountDto accountDto) {
+        Account num = new Account(
+                accountDto.id(),
+                accountDto.accountHolderName(),
+                accountDto.balance());
         return num;
     }
 }
